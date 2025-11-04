@@ -1,68 +1,71 @@
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
+
 export default function Contact() {
   return (
-    <footer className="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
-      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © {new Date().getFullYear()} Mamadou Diouldé Baldé — Ingénieur
-          Logiciel.
-        </span>
-        <p className="text-gray-700 dark:text-gray-300">
-          📧 Email :{" "}
-          <a
-            href="mailto:baldedioulde992@gmail.com"
-            className="text-primary hover:underline"
-          >
-            baldedioulde992@gmail.com
-          </a>
-        </p>
-        <p className="mt-2 text-gray-700 dark:text-gray-300">
-          📱 Téléphone : +224 620-50-31-10 / 662-60-91-80
-        </p>
-        <div className="mt-4 space-x-4">
-          <a
-            className="text-primary hover:underline"
-            href="https://github.com/xxxxxxxx/"
-            target="_blank"
-          >
-            GitHub
-          </a>
-          <a
-            className="text-primary hover:underline"
-            href="https://www.linkedin.com/"
-            target="_blank"
-          >
-            LinkedIn
-          </a>
+    <footer className="bg-gradient-to-r from-primary/5 via-background to-accent/5 border-t mt-4">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          {/* Brand */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Portfolio
+            </h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Développeur Full Stack passionné par la création d'expériences web modernes et performantes.
+            </p>
+            <div className="flex gap-4">
+              <a 
+                href="https://github.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-card hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/mamadou-diould%C3%A9-bald%C3%A9-031530290/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-card hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              {/* <a 
+                href="mailto:contact@example.com"
+                className="p-2 rounded-lg bg-card hover:bg-primary/10 transition-all duration-300 hover:scale-110"
+              >
+                <Mail className="w-5 h-5" />
+              </a> */}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            {/* <h4 className="font-semibold text-lg">Navigation</h4>
+            <nav className="flex flex-col space-y-2"> */}
+              {/* <a href="#about" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+                À propos
+              </a> */}
+              {/* <a href="/projects" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+                Projets
+              </a>
+              <a href="/contact" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+                Contact
+              </a> */}
+            {/* </nav> */}
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg">Contact</h4>
+            <div className="space-y-2 text-muted-foreground">
+              <p>📧 baldedioulde992@gmail.com</p>
+              <p>📱 +224 620-50-31-10 / 662-60-91-80</p>
+              <p>📍 Guinée, Conakry</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
-
-    // <section id="contact" className="w-11/12 md:w-3/4 my-12 text-center">
-    //   <h3 className="text-2xl font-semibold text-primary mb-4">Contact</h3>
-
-    //   <p className="text-gray-700 dark:text-gray-300">
-    //     📧 Email :{" "}
-    //     <a href="mailto:baldedioulde992@gmail.com" className="text-primary hover:underline">
-    //       baldedioulde992@gmail.com
-    //     </a>
-    //   </p>
-
-    //   <p className="mt-2 text-gray-700 dark:text-gray-300">
-    //     📱 Téléphone : +224 620-50-31-10 / 662-60-91-80
-    //   </p>
-
-    //   <div className="mt-4 space-x-4">
-    //     <a className="text-primary hover:underline" href="https://github.com/xxxxxxxx/" target="_blank">
-    //       GitHub
-    //     </a>
-    //     <a className="text-primary hover:underline" href="https://www.linkedin.com/" target="_blank">
-    //       LinkedIn
-    //     </a>
-    //   </div>
-
-    //   <p className="mt-8 text-sm text-gray-500 dark:text-gray-400">
-    //     © {new Date().getFullYear()} Mamadou Diouldé Baldé — Ingénieur Logiciel
-    //   </p>
-    // </section>
   );
 }

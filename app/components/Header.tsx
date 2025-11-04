@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import Image from "next/image"; // ✅ Import pour afficher le logo
 
 const navigationItems = [
   { href: "/projects", label: "Projets" },
@@ -14,10 +14,7 @@ const navigationItems = [
 
 function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
     <button
@@ -25,41 +22,26 @@ function ThemeSwitcher() {
       className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
       aria-label="Changer le thème"
     >
-      {theme === "light" ? (
-        <Moon className="h-4 w-4" />
-      ) : (
-        <Sun className="h-4 w-4" />
-      )}
+      {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
     </button>
   );
 }
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
   const handleNavClick = () => setIsOpen(false);
   const toggleSidebar = () => setIsOpen(!isOpen);
 
   return (
     <>
       <header className="w-full flex items-center justify-between px-6 py-4 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700 mb-5">
-        {/* --- Partie gauche avec la photo --- */}
+        {/* --- Logo à gauche --- */}
         <div className="flex items-center gap-3">
-          <Image
-            src="/images/dioulde.jpg"
-            alt="Photo de Mamadou Diouldé Baldé"
-            width={50}
-            height={40}
-            className="rounded-full border-2  object-cover"
-          />
-          <div>
-            <h1 className="text-lg font-bold text-primary">
-              Mamadou Diouldé Baldé
-            </h1>
-            <p className="text-xs text-gray-500 dark:text-gray-300">
-              Ingénieur Logiciel • Développeur Full Stack
-            </p>
-          </div>
+          <Link href="/" className="flex items-center gap-2">
+             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Portfolio
+            </h3>
+          </Link>
         </div>
 
         {/* --- Navigation desktop --- */}
@@ -95,14 +77,15 @@ export default function Header() {
           <div className="fixed top-0 right-0 h-full w-[300px] sm:w-[400px] bg-white dark:bg-gray-800 shadow-xl z-50 transform transition-transform duration-300 ease-out md:hidden">
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-                <div>
-                  <h2 className="text-lg font-semibold text-primary">
-                    Mamadou Diouldé Baldé
-                  </h2>
-                  <p className="text-sm text-gray-500 dark:text-gray-300">
-                    Ingénieur Logiciel • Développeur Full Stack
-                  </p>
-                </div>
+                <Link href="/" onClick={handleNavClick} className="flex items-center gap-2">
+                  <Image
+                    src="/logo.png"
+                    alt="Logo"
+                    width={45}
+                    height={45}
+                    className="rounded-full border-2 border-primary shadow-sm"
+                  />
+                </Link>
                 <button
                   onClick={handleNavClick}
                   className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
