@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
 export default function Home() {
   return (
     <section className="w-11/12 md:w-4/5 lg:w-[97%] mx-auto text-center py-4 mb-4 flex flex-col items-center bg-gray-600 text-white">

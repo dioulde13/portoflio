@@ -2,15 +2,15 @@
 
 import { Mail, Phone, MapPin } from "lucide-react";
 
-export default function Contact() {
+export default function Formations() {
   return (
     <section className="w-11/12 md:w-[97%] mx-auto py-12 bg-card p-4 rounded-xl shadow">
       <div className="flex justify-center">
-       
-        {/* ---- SECTION GAUCHE ---- */}
-        <div >
-         <h2 className="text-4xl font-bold text-blue-600 mb-3">Contactez-moi</h2>
-        {/* <p className="text-gray-600 mb-10">
+        <div>
+          <h3 className="text-2xl font-semibold text-primary mb-4">
+            Mes formations
+          </h3>
+          {/* <p className="text-gray-600 mb-10">
           Vous avez un projet en tête ? N'hésitez pas à me contacter pour en
           discuter !
         </p> */}
@@ -18,8 +18,8 @@ export default function Contact() {
           <p className="text-gray-600 mb-8">
             Je suis toujours ouvert aux nouvelles opportunités et
             collaborations. Que ce soit pour un projet freelance, un poste
-            permanent ou simplement pour échanger sur le développement web et mobile,
-            n'hésitez pas à me contacter.
+            permanent ou simplement pour échanger sur le développement web et
+            mobile, n'hésitez pas à me contacter.
           </p>
 
           <div className="flex flex-col gap-6">
@@ -41,7 +41,9 @@ export default function Contact() {
               </div>
               <div>
                 <p className="font-medium text-gray-700">Téléphone</p>
-                <p className="text-gray-600">+224 620-50-31-10 / 662-60-91-80</p>
+                <p className="text-gray-600">
+                  +224 620-50-31-10 / 662-60-91-80
+                </p>
               </div>
             </div>
 
