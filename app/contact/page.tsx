@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section className="w-11/12 md:w-[97%] mx-auto py-12 bg-card p-4 mt-4 rounded-xl shadow">
+    <section className="w-11/12 md:w-[97%] mx-auto py-2 bg-card p-4 mt-4 rounded-xl shadow">
       <div className="flex justify-center">
        
         {/* ---- SECTION GAUCHE ---- */}
