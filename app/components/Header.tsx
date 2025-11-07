@@ -87,7 +87,7 @@ export default function Header() {
             className="fixed inset-0 bg-black/50 z-40 md:hidden"
             onClick={() => setIsOpen(false)}
           />
-          <div className="fixed top-0 right-0 h-full w-[300px] sm:w-[400px] bg-white dark:bg-gray-800 shadow-xl z-50 transform transition-transform duration-300 ease-out md:hidden">
+          <div style={{backgroundColor:'turquoise'}} className="fixed top-0 right-0 h-full w-[300px] sm:w-[400px] bg-white dark:bg-gray-800 shadow-xl z-50 transform transition-transform duration-300 ease-out md:hidden">
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
                 <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
@@ -102,12 +102,12 @@ export default function Header() {
                 </button>
               </div>
 
-              <nav className="flex flex-col p-6 space-y-2">
+              <nav className="flex flex-col p-6 space-y-2" >
                 {navigationItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
-                    className="text-base hover:text-primary transition-all duration-200 py-3 px-4 rounded-lg hover:bg-primary/10 border border-transparent hover:border-primary/20 text-left"
+                    className="text-base hover:text-primary transition-all duration-200 py-1 px-2 rounded-lg hover:bg-primary/10 border border-transparent hover:border-primary/20 text-left"
                   >
                     {item.label}
                   </button>
