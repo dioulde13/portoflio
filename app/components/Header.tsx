@@ -50,7 +50,7 @@ export default function Header() {
       <header className="w-full flex items-center justify-between px-6 py-4 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700 mb-5">
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <h3 className="text-xl font-bold">
               Portfolio
             </h3>
           </Link>
@@ -91,8 +91,7 @@ export default function Header() {
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
                 <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
-                  {/* Tu peux mettre ton <Image> ici */}
-                  <h3 className="text-xl font-bold">Logo</h3>
+                  <h3 className="text-xl font-bold">Portfolio</h3>
                 </Link>
                 <button
                   onClick={() => setIsOpen(false)}
