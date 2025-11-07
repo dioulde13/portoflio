@@ -6,4 +6,10 @@
 
 html {
   scroll-behavior: smooth;
+    scroll-padding-top: 30px; /* hauteur estimée de ton header */
+
+}
+
+section {
+  scroll-margin-top: 30px; /* même valeur ou ajustée */
 }

@@ -1,7 +1,7 @@
 import Home from "./components/Home";
 import Projects from "./projects/page";
 import Experience from "./experience/page";
-import Skills from "./competences/page";
+import Competences from "./competences/page";
 import Contact from "./contact/page";
 
 export default function HomePage() {
@@ -21,7 +21,7 @@ export default function HomePage() {
         </section>
 
         <section id="skills" className="w-full">
-          <Skills />
+          <Competences />
         </section>
 
         <section id="contact" className="w-full">
